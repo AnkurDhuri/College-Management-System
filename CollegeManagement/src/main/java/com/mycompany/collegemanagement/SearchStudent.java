@@ -209,7 +209,7 @@ public class SearchStudent extends javax.swing.JFrame {
         }
 
         try{
-            Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/college", "root", "Ankur@45");
+            Connection con = DriverManager.getConnection("DBLink", "username", "DBPassword");
             String query = "SELECT * FROM ACOLLEGE WHERE ID = ?";
             PreparedStatement pstm = con.prepareStatement(query);
             pstm.setString(1,studentrollno);
