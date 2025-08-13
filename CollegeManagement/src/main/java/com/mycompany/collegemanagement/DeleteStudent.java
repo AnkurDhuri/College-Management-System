@@ -174,7 +174,7 @@ public class DeleteStudent extends javax.swing.JFrame {
         // TODO add your handling code here:
         String rollno = SRollNo.getText();
         try{
-            Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/college", "root", "Ankur@45");
+            Connection con = DriverManager.getConnection("DBLink", "username", "DBPassword");
             String query = "Delete From acollege where Id = ?";
             PreparedStatement pstm = con.prepareStatement(query);
             pstm.setString(1,rollno);
