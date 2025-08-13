@@ -161,7 +161,7 @@ public class UpdateStudent extends javax.swing.JFrame {
         String newRollno = NewRollNo.getText();
         
         try{
-            Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/college", "root", "Ankur@45");
+            Connection con = DriverManager.getConnection("DBLink", "username", "DBPassword");
             String query ="Update acollege SET NAME = ?, CLASS = ? Where ID = ?";
             PreparedStatement pstm = con.prepareStatement(query);
             pstm.setString(1,newname);
