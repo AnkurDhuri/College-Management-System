@@ -226,7 +226,7 @@ public class DeleteStudent extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         try (
-            Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/college", "root", "Ankur@45");
+            Connection con = DriverManager.getConnection("DBLink", "username", "DBPassword");
             PreparedStatement pstm = con.prepareStatement("SELECT * FROM acollege");
             ResultSet r = pstm.executeQuery()
         ) {
