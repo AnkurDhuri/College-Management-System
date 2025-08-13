@@ -150,7 +150,7 @@ public class AddStudent extends javax.swing.JFrame {
         String rollno = RollNo.getText();
         String classs = Class.getText();
         try{
-            Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/college", "root", "Ankur@45");
+            Connection con = DriverManager.getConnection("DBLink", "username", "DBPassword");
             String query = "Insert Into Acollege Value(?,?,?)";
             PreparedStatement pstm = con.prepareStatement(query);
             pstm.setString(1,studentname);
